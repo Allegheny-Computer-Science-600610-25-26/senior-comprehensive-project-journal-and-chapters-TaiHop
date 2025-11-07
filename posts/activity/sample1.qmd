@@ -1,10 +1,10 @@
 ---
-title: "Activity 1 post"
+title: "Activity template post"
 date: "2024-08-29"
 ---
 
-Welcome, my senior comprehensive project is called Tai's checker. My whole project is based around making stats more accesible to create more opportunities for the athlete and to revitalize sports through visualization of stats. This idea along with me taking ownership I came up with the name Tai's Checker.
+This is the first post in a Quarto blog. Welcome!
 
 ![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+Since this post doesn't specify an explicit image, the first image in the post will be used in the listing page of posts.
