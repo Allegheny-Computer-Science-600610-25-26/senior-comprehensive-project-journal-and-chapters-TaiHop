@@ -1,12 +1,15 @@
 ---
 title: "Activity 2 post"
-date: "2024-08-29"
+date: "Fall 2025"
 ---
 
-Chapter 1 Outline
+# Chapter 1 Outline
 
-# Motivation/ Goals
+
+## Motivation/ Goals
+
 
 ## Current State of the Art
+
 
 ## Ethical Implications
