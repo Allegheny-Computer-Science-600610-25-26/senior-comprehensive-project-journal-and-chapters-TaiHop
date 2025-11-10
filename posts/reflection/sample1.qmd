@@ -1,8 +1,9 @@
 ---
-title: "Reflection 1"
-date: "2025-11-3"
+title: "Sample reflection post"
+date: "2025-08-29"
 ---
 
 ![Image post thumbnail](thumbnail.jpg)
 
-The current state of my project is the parsing of the pac website and the scrapine/storing of information of the data and then i have a search function. As of now its a manual interaction and not all players are scraped because certain players are listed on the charts for individual stats. Moving foward I will be working on automation of the manual steps and also finding a way to scrape all players from the site
+Students complete these posts in response to various reflective prompts introduced
+throughout the semester.
