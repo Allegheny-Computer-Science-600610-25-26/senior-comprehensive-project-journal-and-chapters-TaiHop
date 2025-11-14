@@ -12,15 +12,15 @@ format:
 natbiboptions: numbers
 # EDIT AT YOUR OWN PERIL #
 
-title: Senior Thesis Title
+title: Tais-Checker
 
-firstreader: First Reader
-secondreader: Second Reader
+firstreader: Oliver Bonham-Carter PHD
+secondreader: Gregory Kapfhammer PHD
 
 bibliography: references.bib
 
 author:
-  - name: A. Student
+  - name: Tai Hopkins
     affiliation:
       name: Allegheny College
       address: 520 N. Main St., Box Q
