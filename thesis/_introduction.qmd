@@ -18,7 +18,7 @@ In addition my tool can also serve multiple purposes because of the data I colle
 
 
 
-![Figure 1: WorkFlow of tool](thesis/images/fig_comp.png)
+![WorkFlow of tool](images/fig_comp.png)
 While I mentioned earlier that the tool mainly covers two factors, it does help a little with popularity as well. It’s just not on the same level as athletes who get televised coverage. Those players gain popularity automatically because people already see them on TV. The athletes using my tool still need to be somewhat known ahead of time or have been seen by someone. However, using my tool will help be their best foot forward as the coaches and scouts will see the players most vital information they need instead of seeing things that don’t matter as much but also in a timely manner as my tool will deliver results fast and reliable . How do I know the results will be timely and accurate; I know it will be because of tests I ran
 1.4 Tests
             The tests I conducted for this experiment were straightforward but highly effective. I evaluated three key areas: time, storage, and the accuracy of the data my tool scraped and stored. First, I measured how long it took to manually gather statistics compared to using the tool I created. Next, I examined the amount of storage required, which was especially important because all information was being compiled into a single large database. Finally, I tested the accuracy of the collected data to ensure that every player’s information was captured correctly and that no entries were missing. Together, these tests helped confirm the tool’s reliability and provided a strong foundation for future development.
@@ -33,7 +33,7 @@ Below is a figure of what the outcome would look like within my tool. The figure
 
 
 
-![Figure 2: Data Visualizations](thesis/pages/graph_mattj.png)
+![Data Visualizations](images/graph_mattj.png)
 My tool is optimal because the coaches are seeing the real they see graphs of the players stats that show how an athlete is doing, nothing that might create an imbalance between players in my database will be added to level the playing field. The more and more my tool gets used the better everything gets in terms of equality between players. This would be because everyone is using the same system. 
 1.7 Ethical Concerns
      Ethical concerns play an important role in shaping the direction and integrity of my project, and I will be examining several of these issues below also noting how my tool, DataSeekr will help prevent these issues
