@@ -24,7 +24,7 @@ A system like DataSeekr takes a slightly different approach. Instead of dependin
 
 ## Web Scraping and Automated Data Collection
 
-“Web scraping” means using automated software (bots) to retrieve data from web pages, parse relevant information, and store it in a structured form (e.g. CSV, database). For sports analytics, web scraping is often an attractive way to collect publicly available statistics, game logs, roster listings, highlight-video metadata, schedules, and more especially when no official API or bulk-export feature exists.
+“Web scraping” means using automated software to retrieve data from web pages, parse relevant information, and store it in a structured form (e.g. CSV, database). For sports analytics, web scraping is often an attractive way to collect publicly available statistics, game logs, roster listings, highlightv ideo metadata, schedules, and more especially when no official API or bulk-export feature exists.
 
 But scraping comes with serious ethical, legal, and technical considerations. Even if the data are public in principle, a website’s terms of service may forbid automated scraping or bulk harvesting. There are also potential copyright or database right issues, especially if the site collects and compiles data. According to recent research, as scraping becomes more widespread (for example to feed large language models or AI training sets), many site owners are tightening policies, making scraping riskier. [@EthicsScraping2024]
 
