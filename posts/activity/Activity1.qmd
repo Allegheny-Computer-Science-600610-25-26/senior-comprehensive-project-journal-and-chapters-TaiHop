@@ -3,4 +3,4 @@ title: "Activity 1 post"
 date: "Fall 2025"
 ---
 
-Welcome, my senior comprehensive project is called Tai's checker. My whole project is based around making stats more accesible to create more opportunities for the athlete and to revitalize sports through visualization of stats. This idea along with me taking ownership I came up with the name Tai's Checker.
+Welcome, my senior comprehensive project is called Dataseekr. My whole project is based around making stats more accesible to create more opportunities for the athlete and to revitalize sports through visualization of stats. This idea along with me taking ownership I came up with the name Tai's Checker.
