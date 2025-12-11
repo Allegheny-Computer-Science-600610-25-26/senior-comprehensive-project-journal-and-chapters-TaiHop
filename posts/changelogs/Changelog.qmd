@@ -1,0 +1,15 @@
+---
+date: "Fall 2025"
+"Thesis Version": 1.0.0
+---
+
+After a while of of working i have come up to my version 1.0.0 of my thesis. As I writing this right now  I have just got to upload my newest version to github.
+
+For my introduction and related works section, I feel like i came in thinking of not writing much but as the weeks progressed i really found myself in a place where I wish i did more from the beginning.
+
+I had to basiaclly rewrite my introduction because I left little direction to go in with minimal writing. Moving foward I will work a bit differently with my time. For related works it was a little different as I now had direction, i just had to add some more information. a list of more impactful changes are:
+
+Lenghth
+citations
+visualizations
+broader coverage for all aspects
