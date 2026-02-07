@@ -33,7 +33,8 @@ The collected data is initially saved into CSV files before being loaded into a 
 
 Finally, the program incorporates intentional delays between page loads and team scrapes to ensure that content fully renders and to minimize strain on the website’s servers. These delays improve the reliability and accuracy of the data collection process while following responsible web scraping practices.
 
+[TODO] - add versions for BS4 etc.
 
 ## DB Maker (Code.py)
 
-
+Sqlite
