@@ -1,8 +1,9 @@
 # Methods 
 
+
 ## Overview 
 
-To address the issues stated around player stats accessibility, I built DataSeekr. Which is a tool that makes player stats more accessible and easy to find. The tool is a search engine that gives visuals along with the player stats and on the backend there is a scraper updating the database that the searching function accesses. The workflow looks like this :
+To address the issues stated around player stats accessibility, I built a tool named DataSeekr. Which is a tool that makes player stats more accessible and easy to find. The tool is a search engine that gives visuals along with the player stats and on the backend there is a scraper updating the database that the searching function accesses. The workflow looks like this :
 
 			
 ![FlowChart](images/WorkFlow.png)
@@ -10,10 +11,12 @@ To address the issues stated around player stats accessibility, I built DataSeek
 
 ## Grabber
 
-	Looking at the flow chart we see that this function is where it all starts. To begin,my grabber function handles a few things. Things such as making a csv, making that csv a database. I have it this way because csv files are easily manipulated, promoting a more streamlined process as anyone who wants to make their own adaptations can take the csv. 
-	
-For the actual scraping portion we have two main actors that really make all this possible are selenium and Beautifulsoup. I chose Selenium for a list of reasons, however the main reason is that selenium can handle javascript. This matters because the normal standard scrapers (ex. requests) can't always run javascript, leading to the site not actually being rendered leaving an empty pull from the site. This becomes an issue if you are using a scraper that can't handle javascript scrape but you would end up the table creation in the database, however no information will be stored or you get an error code. For my tool it loads the entire site and brings it to me, selenium ensures page content has fully rendered before trying anything else. Here is where beautiful comes into play as it uses the fully rendered site created from selenium to parse the HTML code. I have also implemented time restraints of five seconds to not run into bot protections for rapid scraping.BeautifulSoup, after parsing the HTML code, follows the path. Here is an example of a path/information in HTML code within PAC site:
+Looking at the flow chart, this is where the entire process begins. The grabber function serves as the foundation of the system and is responsible for several essential tasks. These include generating a CSV file from the scraped data and then converting that CSV into a database. This approach was chosen because CSV files are easy to manipulate, review, and share, which promotes a more streamlined and flexible workflow. By using CSV files as an intermediate step, anyone who wants to make their own adaptations or extensions to the project can work directly with the CSV data without needing to interact with the database layer.
 
-					
-				
+For the scraping portion of the project, two primary tools make the process possible: Selenium and BeautifulSoup. Selenium was selected for multiple reasons, with the most important being its ability to handle JavaScript-driven content. Many modern websites rely heavily on JavaScript to load data dynamically, and standard scraping tools such as requests are often unable to render this content properly. When JavaScript is not executed correctly, the page may appear empty, which can lead to situations where database tables are created but contain no data, or where scraping attempts result in errors. Selenium avoids these issues by fully loading and rendering the entire webpage before any data extraction occurs, ensuring that all required content is available.
+
+Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five-second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example of how the HTML structure and data paths appear within the PAC site:
+
+
+
 ![HTML Info](images/HTML.png)
