@@ -6,13 +6,43 @@ have used, etc.  Use technical diagrams, equations, algorithms, and paragraphs o
 to describe the research that you have completed. Be sure to number all figures and
 tables and to explicitly refer to them in your text.
 
-This should contain:
+# Methods
 
-* lists
-* with points
-* and more points
-  * possibly subpoints
+Looking at the related works section we can see that this area has been studied and similar tests have been run. As well we get the problem my tool has addressed in the introduction paragraph. Now I will be discussing how I made my tool and why I chose the stack I chose.
 
-For those projects whose implications address social or moral issues (i.e. ethical
-standards, causes, effects), you will want to use this section to describe how you
-actively mitigated or considered these issues.
+# My Tool
+
+## Scraper (Grabber)
+Selenium
+Beautifulsoup
+time
+
+	Within my grabber function it handles a few things. Things such as making a csv, making that csv a database. I have it this way because csv files are easily manipulated, promoting a more streamlined process as anyone who wants to make their own adaptations can take the csv. 
+	For the actual scraping portion we have two main actors that really make all this possible are selenium and Beautifulsoup. I chose Selenium for a list of reasons, however the main reason is that selenium can handle javascript. This matters because the normal standard scrapers (ex. requests) can't always run javascript, leading to the site not actually being rendered leaving an empty pull from the site. This becomes an issue if you are using a scraper that can't handle javascript scrape but you would end up the table creation in the database, however no information will be stored or you get an error code. For my tool it loads the entire site and brings it to me, selenium ensures page content has fully rendered before trying anything else. Here is where beautiful comes into play as it uses the fully rendered site created from selenium to parse the HTML code. I have also implemented time restraints of five seconds to not run into bot protections for rapid scraping.BeautifulSoup, after parsing the HTML code, follows the path. Here is an example of a path/where information in HTML code within PAC site:
+
+				![HTML Info](HTML.png)
+
+	This is actually what we are looking for with the scraper, so when the Beautifulsoup takes over it handles that information and gives a csv output. Which then calls the converter code to make this csv file a database with the most important stats. I only have certain stats because as a player I don’t look at all areas for certain stats, so the stats are more catered to what the player and coach will be looking for more. This happens for each section they have the site for individual sites which are ***Hitting, Pitching, and Fielding*** and that information is then stored in the player class we created at the top of the file.
+
+	This action or sequence of actions is looped through every team to get the three fields previously listed, which is also represented in the database as there are three sections. As far as updates go, the data within my tool will be on an update schedule of twice a week, one at the start and one at the end. I am doing the scheduled “update” through windows tasks. And I will also have the clean function clear the csv after every one so that there isn't a stockpile of csv files on my local device from running the grabber function.
+			
+## Search Function/ Web. (Seekr.py)
+
+For my tool I wanted the final product on some sort of web page that serves as a search engine. Almost like a google landing site, the simplicity is what I was aiming for as the PAC before was complex and a bit difficult to find the stats you want. So simplicity was the aim, using Streamlit was the choice because Streamlit is very easy to connect with in relation to setup and you don't need to pay for anything, as you can do everything needed for my tools aimed output with Streamlit. Using Streamlit you don't need to do anything with javascript or HTML code to build a frontend, it does it for you. Making the whole process very easy to modify and/or update.
+
+For the graphs within Seekr I wanted graphs that are easy to follow and graphs that can be easily changed in relation to the actual layout of the graph. I first used pandas to connect the database. Think of pandas as the glue between the data and the graphs. I used pandas due to simplicity and efficiently it can handle different data types. For the graphs I am using Matplotlib and Plotly to make graphs as you search the player up. Graphs that are created during search look like the figure below:
+
+![Figure](graph-methods.png)
+
+		Everything else inside the Seekr function isn't as major as the previous implementations. Through locally run tests, I came across a few redundancies, like the x-axis of the graphs had a bunch of ticks (ex. 2023.1 …) . To get around this I imported Ticker which basically ensures that the x-axis will only be integers, ensuring better readability.
+
+## Converter (Code.py)
+
+Sqlite
+Csv
+
+	For the database I chose SQlite over other databases due to ease of use and the databases are free to use and are compatible with python . 
+
+## Overall
+
+I used Selenium because the site renders stats via JavaScript, then passes the rendered DOM to BeautifulSoup for clean parsing. I stored data in SQLite because it’s lightweight, persistent, and perfect for structured sports stats without infrastructure overhead. CSV acts as a durable checkpoint between scraping and database loading, which makes the pipeline easier to debug and rerun
