@@ -5,21 +5,10 @@
 
 To address the issues stated around player stats accessibility, I built a tool named DataSeekr. Which is a tool that makes player stats more accessible and easy to find. The tool is a search engine that gives visuals along with the player stats and on the backend there is a scraper updating the database that the searching function accesses. The workflow looks like this :
 
+
 			
 ![FlowChart](images/WorkFlow.png)
 
-
-
-The versions for everything inside DataSeekr are as Follows:
-
-- Python 3.11
-- matplotlib>=3.10.7
-- plotly>=6.3.1
-- streamlit>=1.52.2
-- selenium>=4.18
-- beautifulsoup4>=4.12
-- webdriver-manager>=4.0
-- pandas>=2.2
 
 
 ## Grabber
@@ -33,3 +22,19 @@ Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to p
 
 
 ![HTML Info](images/HTML.png)
+
+
+
+After the data paths are identified within the HTML structure, the system collects a predefined set of key statistics for hitting, pitching, and fielding. These metrics were selected in advance because they are widely used to evaluate player performance and directly support the goals of the project. By limiting the scope of the data to these essential statistics, the dataset remains clean and focused, making it easier to analyze trends and compare players across different teams and seasons.
+
+To ensure consistency throughout the dataset, all statistics are renamed from the labels used on the source website to standardized column names within the database. This prevents inconsistencies and guarantees that each statistic is always stored under a uniform identifier. Each player is represented by a Player object that stores the player’s name, school, season, and associated statistics. This objectoriented design keeps the data well organized and allows the project to be expanded or modified easily in the future.
+
+The collected data is initially saved into CSV files before being loaded into a local database. Using CSV files as an intermediate step makes the data easier to inspect, debug, and reuse if issues arise during the database loading process. This design also allows the database to be rebuilt without rescraping the website, saving time and reducing unnecessary requests to the source site.
+
+Finally, the program incorporates intentional delays between page loads and team scrapes to ensure that content fully renders and to minimize strain on the website’s servers. These delays improve the reliability and accuracy of the data collection process while following responsible web scraping practices.
+
+[TODO] - add versions for BS4 etc.
+
+## DB Maker (Code.py)
+
+Sqlite
