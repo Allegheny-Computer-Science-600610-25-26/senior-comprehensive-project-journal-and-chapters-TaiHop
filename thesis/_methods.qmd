@@ -10,6 +10,17 @@ To address the issues stated around player stats accessibility, I built a tool n
 ![FlowChart](images/WorkFlow.png)
 
 
+The versions for everything inside DataSeekr are as Follows:
+
+- Python 3.11
+- matplotlib>=3.10.7
+- plotly>=6.3.1
+- streamlit>=1.52.2
+- selenium>=4.18
+- beautifulsoup4>=4.12
+- webdriver-manager>=4.0
+- pandas>=2.2
+
 
 ## Grabber
 
@@ -33,8 +44,26 @@ The collected data is initially saved into CSV files before being loaded into a 
 
 Finally, the program incorporates intentional delays between page loads and team scrapes to ensure that content fully renders and to minimize strain on the website’s servers. These delays improve the reliability and accuracy of the data collection process while following responsible web scraping practices.
 
-[TODO] - add versions for BS4 etc.
+
 
 ## DB Maker (Code.py)
 
-Sqlite
+As we discussed how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is an image of the map of converter: 
+
+
+![Csv to DB Concept](images/Converter_Workflow.png)
+
+
+This data ingestion process reliably loads statistical data from CSV files into a centralized SQLite database while keeping data safe and easy to manage. It starts by reading the CSV into a pandas DataFrame because pandas makes it simple to parse, inspect, and transform tabular data. Using pandas also means I can handle many CSV formats and perform validation and cleaning before anything is written to the database.
+
+Normalization of  all column names to lowercase to keep the database schema consistent. Small differences in capitalization can cause hard to find errors when querying or joining data. By forcing column names to a single case I reduce mismatch problems and make downstream queries and code simpler and more predictable. Then, I  validate that a year column exists because the year is the primary way I identify which records belong together in time. Without a year it becomes difficult to manage historical data or safely replace a single season of data. Requiring the year early lets me detect malformed files before any database changes are made.
+
+I used SQLite for the master database because it is lightweight, easy to set up, and works well for many small to medium sized data projects. It requires no separate server which makes development and deployment simpler. The same design could be used with a client server database later if the project grows. I made section specific tables such as hitting stats or pitching stats when needed and I built the table schema dynamically from the CSV columns. Dynamically creating columns lets the database adapt to schema changes in the CSV without manual SQL changes. I also add an auto incrementing id primary key to give each row a stable unique identifier which helps with traceability and debugging.
+
+Before inserting new data I identify all the year and school combinations present in the CSV and delete only existing rows that match those combinations. I do this because it avoids wiping the whole table and prevents accidental loss of unrelated data. Targeted deletion lets me reimport a file safely without creating duplicate rows or disturbing other schools or other years. If the row wasn't replaced then I append the new CSV rows to the table inside a transaction and then commit the transaction. Using transactions ensures that the database never ends up in a partial state if something goes wrong during the load. I close the database connection when the work is done to free resources. I also log a success message that states how many rows were loaded so there is an auditable record of the operation and simple feedback for the user.
+
+In summary I chose pandas for flexible parsing and transformation, lowercase column names for schema consistency, year validation for correct identity, dual method school detection for flexibility, SQLite for simplicity, dynamic schema creation for adaptability, targeted deletion for safety, creating a safe and reliable tool.
+
+
+## Search / UI (Seekr.py)
+
