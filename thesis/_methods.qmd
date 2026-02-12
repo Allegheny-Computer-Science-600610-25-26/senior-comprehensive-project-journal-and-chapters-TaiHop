@@ -51,7 +51,7 @@ Finally, the program incorporates intentional delays between page loads and team
 As we discussed how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is an image of the map of converter: 
 
 
-![Csv to DB Concept](images/Converter_Workflow.png)
+![Csv to DB Concept](images/Converter_Workkflow.png)
 
 
 This data ingestion process reliably loads statistical data from CSV files into a centralized SQLite database while keeping data safe and easy to manage. It starts by reading the CSV into a pandas DataFrame because pandas makes it simple to parse, inspect, and transform tabular data. Using pandas also means I can handle many CSV formats and perform validation and cleaning before anything is written to the database.
