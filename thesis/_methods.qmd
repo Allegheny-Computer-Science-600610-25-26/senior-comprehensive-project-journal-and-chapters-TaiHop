@@ -48,7 +48,7 @@ Finally, the program incorporates intentional delays between page loads and team
 
 ## DB Maker (Code.py)
 
-As we discussed how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is an image of the map of converter: 
+As we discussed before on how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is an image of the map of converter: 
 
 
 ![Csv to DB Concept](images/Converter_Workkflow.png)
