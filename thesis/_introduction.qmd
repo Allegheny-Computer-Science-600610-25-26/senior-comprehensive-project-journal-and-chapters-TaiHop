@@ -1,36 +1,79 @@
 # Introduction
 
-This chapter describes your completed senior thesis work,
-including the overall aims  and the background motivating your research. Whenever
-possible, you should use one or more concrete examples and technical diagrams.
+## What is data manipulation?
 
-It is often useful and necessary to separate the introduction into multiple sections.
-Several possible sections are proposed below, you can use these or distribute your
-introductory text into sections in another way.
+Data manipulation is the process of adjusting, organizing, or transforming data to make it more useful, meaningful, or easier to analyze. It involves reshaping raw information into a structured and interpretable form by cleaning errors, standardizing formats, combining or separating data sets, and generating new calculated values. Through these operations, data becomes better suited for analysis, decision-making, visualization, and further computational tasks. Ultimately, data manipulation enhances the accuracy, clarity, and usability of information across a wide range of applications.
 
-The headings below propose _one way_ you might structure this section of the document.
+## How Would That Look in Sports?
 
-## Motivation
+Data manipulation in sports can lead to many different possible outcomes, and it can completely change a person’s chances of getting new or any opportunities at all. When data is handled the wrong way, it can cause athletes to lose interest from scouts, lose popularity, and lose exposure. These three things are some of the most important parts an athlete needs in order to get opportunities in the first place.
 
-## Current State of the Art
+When data is used the right way, though, it can actually help athletes a lot. Graphs that show a player’s projectability can keep scouts focused on you longer and keep their interest within your scope instead of drifting to someone else. This supports two out of the three main things athletes need. The reason it doesn’t fully cover popularity is because popularity is much harder to control.
 
-## Goals of the Project
+Athletes in higher divisions already have cameras everywhere and often appear on television, so they gain popularity without really trying. Competing with that when you don’t have the same platform is basically a high-risk, low-reward strategy. With that in mind, it makes more sense to focus on goals that athletes can actually reach instead of trying to win a popularity battle they probably can’t win.
 
-## Ethical Implications
+## My idea
 
-This document requires that you discuss the ethical implications of your work -- no
-matter how benign you consider the outcome of your project. As several major studies
-of ethical issues in computer science assert: _no project is completely value-neutral_.
+The idea I came up with is to make a player search engine that gives graphs showing a player’s projectability while also providing accurate, up-to-date results. This tool focuses on the two main factors athletes can realistically improve, which are interest and exposure. By doing this, it helps keep scouts focused on the athlete they’re searching for because they can find the information they need much quicker.
 
-To assist you in elaborating on these issues, the following areas are topics you might
-consider addressing. You do not need to address all of them.
+Time is one of the biggest problems scouts deal with. They are always moving fast, and when they can’t find what they need right away, they usually move on to the next athlete. If you aren’t quick enough, you lose potential opportunities. Coaches and scouts deal with constant time pressure and often make fast decisions with limited information. Even something small like a late highlight video, a schedule conflict, or missing one showcase can seriously hurt an athlete’s chances[@StavrosSmithLopez2022].
 
-* Information Privacy
-* Information Accuracy (e.g. can contain reliability)
-* Potential Misuse (e.g. computer crime, unintended consequences)
-* Second- or Third-Party Risk (e.g. safety)
-* Data Collection Issues (e.g. issues inherent in collecting data)
-* Algorithmic or Data Bias
-* Potential Power Difference / Social Imbalance / Issues in Equity
+My tool helps prevent this by keeping stats updated and easier to find, which cuts down the time and effort scouts normally spend searching for players. This naturally leads to more exposure, because once scouts can access your stats quickly, you enter their list instead of being overlooked. Interest and exposure build off each other, and this tool makes that process smoother.
 
-In addition, reflect on ways that the above harms can be or are mitigated by your work.
+In addition my tool can also serve multiple purposes because of the data I collect. My tool does not just give graphs but also it makes 2 csv files (comma-separated values) . How my tool works is as follows; the first step of my tool is collecting data and the storing of the data. I use beautiful-soup and selenium as my web parsers and scrapers. Their job is to create a cloned version of the site and then scrape all the information I tell it to. Then it will create 2 csv files whose information will also be added to the database. The reason I have it making a csv file is because I chose to make it go from csv to database, however the other reason it makes a csv is that they are easy to evaluate and make changes to. This allows other companies or whomever is using my tool to input it into their own systems and make their own adjustments.  This idea aligns with the growing role of data science in sports[@Previati2020]. After the csv files are made it get added to a database and this is where everyone's stats will be. For my database I am using sqlite3 database for their ease of use and their reliability. When people search using my tool, they are simply searching the database, given the players stats and visualizations to show projectability while also giving insight to a player on what they need to work on to help their stats. For example when seeing someone batting average start to plummet they know they need to work on the hitting aspect of the game and as far as drills go if they are doing a drill/ or spending a lot of time and see a decrease they know that they need to change up what they are doing , this is more player sided, I say this because certain drills wont help people so in that aspect it's more like experimenting and tinkering to what they are doing. After all that if we look at a model of my workflow would look like this: 							
+
+![WorkFlow of tool](images/fig_comp.png)
+
+While I mentioned earlier that the tool mainly covers two factors, it does help a little with popularity as well. It’s just not on the same level as athletes who get televised coverage. Those players gain popularity automatically because people already see them on TV. The athletes using my tool still need to be somewhat known ahead of time or have been seen by someone. However, using my tool will help be their best foot forward as the coaches and scouts will see the players most vital information they need instead of seeing things that don’t matter as much but also in a timely manner as my tool will deliver results fast and reliable . How do I know the results will be timely and accurate; I know it will be because of tests I ran
+
+## Tests
+
+The tests I conducted for this experiment were straightforward but highly effective. I evaluated three key areas: time, storage, and the accuracy of the data my tool scraped and stored. First, I measured how long it took to manually gather statistics compared to using the tool I created. Next, I examined the amount of storage required, which was especially important because all information was being compiled into a single large database. Finally, I tested the accuracy of the collected data to ensure that every player’s information was captured correctly and that no entries were missing. Together, these tests helped confirm the tool’s reliability and provided a strong foundation for future development.
+
+## Personal Motivation
+
+My motivation for the creation of the tool stems from my background and things that have peaked my interest. One main reason for me is that I am a collegiate athlete and as an athlete you are constantly looking at your stats. This is just to get an understanding of how you are playing and for the PAC (Presidents Athletics Conference) which i play for finding these stats is rather troublesome. So to combat the issue of the stats being hard to find, I wanted to make this easier for me and for all other athletes. Trailing that thought, another personal reason for me making DataSeekr was because I was introduced to web scraping and ever since I thought it was a very modern way to collect information from something and then also be able to make adaptations to the data collected. Lastly, baseball has been my sport since I was little, this is why I took a more baseball related approach when I created my tool.
+
+## Professional Motivation
+
+Looking onwards to more of a professional motivation we can look at multiple reasons on why this tool was made. First we can look at the overarching issue which is players lose opportunities due to timing of different things. DataSeekr will help with this because it will reduce times of searching for players as the PAC website doesn't have a player search engine, thus you are scrolling through multiple pages of unwanted data taking up more time and potentially driving coaches and scouts away from a player. I also wanted to create a tool that helps players in general, so if asked who is my tool most catered to I would say players. 
+
+However, when I say this I mean that my tool wont have more functions for players but the site is all about showing the players for who they are, unlike other companies like hudl that let people upload videos and those video could 1 highlight and from the video the coach might think I got a good player and in reality this happened 1 time in a game and it never happened again and vise versa. The coach is missing out on a good player because that player doesn't have any film or any good clips. This reinforces the pattern seen across modern sports analytics: technology can significantly enhance performance, yet access to advanced systems remains uneven and largely restricted to elite organizations. [@Gabrisova2025] 
+
+Below is a figure of what the outcome would look like within my tool. The figure will show you a graph that can show projectability and the way it's simple and easy to read. 
+
+![Data Visualizations](images/graph_mattj.png)
+
+My tool is optimal because the coaches are seeing the real they see graphs of the players stats that show how an athlete is doing, nothing that might create an imbalance between players in my database will be added to level the playing field. The more and more my tool gets used the better everything gets in terms of equality between players. This would be because everyone is using the same system. 
+
+## Ethical Concerns
+
+Ethical concerns play an important role in shaping the direction and integrity of my project, and I will be examining several of these issues below also noting how my tool, DataSeekr will help prevent these issues
+
+## Information Privacy & Data Collection
+
+DataSeekr exclusively retrieves information that is already publicly available through the PAC website. Consequently, all data incorporated into this project originates from sources that are openly accessible. Although the underlying information is public, the tool does not disseminate, redistribute, or otherwise provide statistical outputs to any external parties. Access to the processed data is limited to the project’s GitHub repository, where the database is stored, or to the PAC website itself. Because the tool engages solely with publicly available material, no privacy risks are introduced. Furthermore, I reviewed the PAC website’s guidelines to ensure that all data collection and presentation methods adhere to established usage policies. The tool does not commercialize the collected information or repurpose it for profit. Overall, the project relies entirely on publicly accessible data, and as such, conventional privacy considerations are not applicable.
+
+## Potential Misuse & Information Accuracy
+
+Although DataSeekr operates entirely on publicly available information, it is still important to consider how the tool could be misused or misunderstood. Data manipulation, as described earlier, involves adjusting, organizing, or transforming raw information to make it more meaningful. While this process is essential for creating clear visualizations and accessible statistics, improper use of organized data especially in sports can unintentionally distort an athlete’s opportunities. For example, aggregated statistics might be misinterpreted without context, or a user could selectively reference favorable data while ignoring information that provides a more complete picture of performance.
+
+To reduce the risk of misuse, DataSeekr intentionally avoids altering any underlying player statistics. The tool does not create performance rankings or subjective evaluations features that could wrongly influence a coach’s opinion of a player. Instead, it presents raw numbers and visualizations exactly as they appear on the PAC website, simply making them easier to find and interpret. This ensures that scouts, coaches, athletes, and whomever are viewing the same information that is already public, just in a clearer and more accessible format.
+
+Accuracy remains a central concern as well. Because DataSeekr retrieves data directly from the PAC website, the tool’s accuracy is completely dependent on the integrity and consistency of the source. If the PAC website contains outdated or incomplete entries, those same issues will appear in the tool. DataSeekr does not modify the original statistics, adjust values, or attempt to “fill in” missing information. Any discrepancies reflect the official source, and users should verify critical information on the PAC website when necessary.
+
+Additionally, DataSeekr is not designed for automated redistribution or integration into systems that would remove the data from its original context. The tool’s scope remains limited to individual searches and visualizations, which helps prevent misuse such as player profiling, misrepresentation, or the creation of misleading performance summaries.
+
+By keeping the tool transparent, minimal, and aligned strictly with publicly posted statistics, DataSeekr minimizes the risk of misunderstanding, overinterpretation, or unethical application all while preserving the integrity of the information athletes depend on.
+
+## Second and Third Party Risks
+
+Even though DataSeekr relies exclusively on publicly available information from the PAC website, it is still important to recognize that risks can emerge once data is stored, processed, or accessed by individuals beyond the original source. Public data may appear harmless, but when aggregated, reorganized, or combined with additional datasets, it can take on new meanings or expose patterns that were not obvious before. Scholars have noted that even openly accessible data can create ethical challenges when reused in new contexts, particularly if the secondary users misunderstand the purpose of the data or apply it in ways that the original provider did not intend . [@Metcalf2019]
+
+To address these concerns, DataSeekr.ai limits its use of collected information strictly to internal processing such as searching, graphing, and visualization, and does not redistribute, sell, or package the database for any third party consumption. This prevents the data from being taken out of context or repurposed inappropriately. Additionally, all scraped information retains its original meaning and formatting, ensuring that no modifications introduce misleading interpretations or artificial inflation of player performance metrics. By restricting access, keeping the data aligned with its original context, and avoiding any form of commercialization, the project minimizes the possibility of secondary misuse and maintains ethical integrity even when working with public information.
+
+## Goal of my Project
+
+The overarching goal of my project is to create a tool that promotes equality within sports, with a specific focus on the transfer portal and recruitment process. We aim to eliminate missed opportunities caused by factors such as limited accessibility, time constraints, and inequalities present in existing platforms. For example, many athletes face “video inequality,” where players from higher funded or higher division schools have access to better quality film, giving them an unfair advantage.
+
+This project introduces a player search engine that prioritizes reliability, speed, and an equal playing field for all athletes. It is designed to increase exposure and opportunities for players who may have previously been overlooked. The tool will also incorporate data visualizations, making statistics and performance metrics easier to interpret and more accessible to anyone evaluating talent.
