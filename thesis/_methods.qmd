@@ -28,7 +28,7 @@ Looking at the flow chart, this is where the entire process begins. The grabber 
 
 For the scraping portion of the project, two primary tools make the process possible: Selenium and BeautifulSoup. Selenium was selected for multiple reasons, with the most important being its ability to handle JavaScript-driven content. Many modern websites rely heavily on JavaScript to load data dynamically, and standard scraping tools such as requests are often unable to render this content properly. When JavaScript is not executed correctly, the page may appear empty, which can lead to situations where database tables are created but contain no data, or where scraping attempts result in errors. Selenium avoids these issues by fully loading and rendering the entire webpage before any data extraction occurs, ensuring that all required content is available.
 
-Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five-second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example of how the HTML structure and data paths appear within the PAC site:
+Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five-second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example figure of how the HTML structure and data paths appear within the PAC site:
 
 
 
@@ -48,7 +48,7 @@ Finally, the program incorporates intentional delays between page loads and team
 
 ## DB Maker (Code.py)
 
-As we discussed before on how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is an image of the map of converter: 
+As we discussed before on how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is a figure of the map of converter: 
 
 
 ![Csv to DB Concept](images/Converter_Workkflow.png)
@@ -68,7 +68,7 @@ In summary I chose pandas for flexible parsing and transformation, lowercase col
 ## Search / UI (Seekr.py)
 
 
-Moving onto the actual search part of the entire system. As you saw from the figure above this isn't directly connected to the scraping portion of my tool. This portion of the tool is mainly dependent on the database. When ```Seekr.py``` is run, it starts the Streamlit UI and at the same time this is connected to the database stored within the ```src``` folder. The figure below shows a more defined map of search functionality:
+Moving onto the actual search part of the entire system. As you saw from the figure [6] this isn't directly connected to the scraping portion of my tool. This portion of the tool is mainly dependent on the database. When ```Seekr.py``` is run, it starts the Streamlit UI and at the same time this is connected to the database stored within the ```src``` folder. The figure below shows a more defined map of search functionality:
 
 
 ![Seekr map](images/seekr-map.png)
