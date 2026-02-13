@@ -71,5 +71,5 @@ In summary I chose pandas for flexible parsing and transformation, lowercase col
 Moving onto the actual search part of the entire system. As you saw from the figure above this isn't directly connected to the scraping portion of my tool. This portion of the tool is mainly dependent on the database. When ```Seekr.py``` is run, it starts the Streamlit UI and at the same time this is connected to the database stored within the ```src``` folder. The figure below shows a more defined map of search functionality:
 
 
-![Seekr map](seekr-map.png)
+![Seekr map](images/seekr-map.png)
 
