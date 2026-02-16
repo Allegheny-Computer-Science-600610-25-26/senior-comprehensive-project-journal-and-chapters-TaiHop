@@ -10,7 +10,7 @@ To address the issues stated around player stats accessibility, I built a tool n
 ![FlowChart](images/WorkFlow.png)
 
 
-The versions for everything inside DataSeekr are as Follows:
+The versions for the dependencies inside DataSeekr are as Follows:
 
 - Python --> 3.11
 - matplotlib --> 3.10.7
@@ -21,6 +21,7 @@ The versions for everything inside DataSeekr are as Follows:
 - webdriver-manager --> 4.0
 - pandas --> 2.2
 
+It is important to note that I am using UV which basically sets it that the project will always run with these, thus elimating any chances of future versions having compatabilty issues making the tool not run.
 
 ## Grabber
 
