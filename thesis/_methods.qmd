@@ -81,10 +81,10 @@ Breaking down what happens inside the seekr function as partially mentioned abov
 
 For the output, Streamlit directly renders the results returned by the database. The ```st.dataframe()``` function displays the player’s statistics in an interactive table format, allowing sorting and scrolling. Visualizations generated with matplotlib are embedded seamlessly using ```st.pyplot()```. If no results are found, ```st.warning()```  provides immediate user feedback. All rendering is handled internally by Streamlit, meaning no additional formatting or frontend coding is required. The reasons for using matplotlib for the graphics are as follows:
 	
-Seamless Integration with Pandas
-Strong Customization Control
-Handles Multiple Plots Easily
-Lightweight and efficient 
-Works well with streamlit 
+- Seamless Integration with Pandas
+- Strong Customization Control
+- Handles Multiple Plots Easily
+- Lightweight and efficient 
+- Works well with streamlit 
 			
 Overall, Streamlit functions as the presentation and interaction layer of the Seekr system. It bridges the gap between the user and the database by managing input collection, script execution, state handling, and output visualization. Its simplicity, integration with data science libraries, and rapid development capabilities make it an ideal choice.
