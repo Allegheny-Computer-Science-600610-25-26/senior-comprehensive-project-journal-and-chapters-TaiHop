@@ -1,0 +1,16 @@
+---
+title: "Activity 3 post"
+date: "Fall 2025"
+---
+
+# Chapter 2 : Related Works
+
+This article talks about how Statistics in Sports, also known as sports analytics, has grown into an important field that uses data to improve performance and decision-making in sports. It explains that in the past, coaches and teams relied on observation, but advances in technology and computing have made data analysis a key part of sports strategy. The article highlights pioneers like Bill James, whose work led to the Moneyball movement in baseball, and describes how analytics is now used by teams, coaches, and health professionals to evaluate players, plan strategies, and make rule changes. It also mentions organizations like the *American Statistical Association* and *SABR* that support research and collaboration in this area. Finally, it discusses how modern technology, such as tracking cameras and real-time data systems, has made sports analytics more powerful and accessible, influencing both the way sports are played and enjoyed by fans.
+[@silva2016sports]
+
+This article talks about how sports analytics has become an essential part of modern sports, especially with the rise of big data. It explains that as more data is collected on sports performance, the need for experts trained in data analytics continues to grow. The book *Sports Analytics: Analysis, Visualisation and Decision Making in Sports Performance* serves as a detailed guide to how analytics is used in areas like coaching, talent identification, and sports medicine. It highlights the difference between analytics and analysis and explores key methods such as interactive visualization, simulation and modeling, geospatial and spatiotemporal analysis, machine learning, genomic data analysis, and social network analysis. The book also includes practical, mixed-methods case studies, making it a valuable resource for students and professionals in sports analytics, performance analysis, and related fields.
+[@jayal2018sports]
+
+This article talks about sports prediction, which uses data to guess the results of games. Coaches use these models to study their players, understand their opponents, and plan better strategies. The study used data mining methods like cleaning data, choosing key features, and running algorithms to predict the outcomes of Indian Premier League (IPL) cricket matches. The model looked at team and player performance, opponent details, and other factors, reaching an accuracy of about 70%. This relates to baseball because similar prediction models are used in baseball analytics to forecast game results, evaluate player performance, and plan strategies just like in cricket. Both sports use data driven approaches to improve decision making and gain a competitive edge.
+[@Jain2021Sports]
+
