@@ -29,13 +29,15 @@ Looking at the flow chart, this is where the entire process begins. The grabber 
 
 For the scraping portion of the project, two primary tools make the process possible: Selenium and BeautifulSoup. Selenium was selected for multiple reasons, with the most important being its ability to handle JavaScript-driven content. Many modern websites rely heavily on JavaScript to load data dynamically, and standard scraping tools such as requests are often unable to render this content properly. When JavaScript is not executed correctly, the page may appear empty, which can lead to situations where database tables are created but contain no data, or where scraping attempts result in errors. Selenium avoids these issues by fully loading and rendering the entire webpage before any data extraction occurs, ensuring that all required content is available.
 
-Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five-second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example figure of how the HTML structure and data paths appear within the PAC site:
+Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example figure of how the HTML structure and data paths appear within the PAC site:
 
 
 
 ![HTML Info](images/HTML.png)
 
 
+
+Any possible issues relating changes to the site relating to how they have things tagged, will be no issue because the table layout adaptation would be a simple fix as the overall structure should stay the same
 
 After the data paths are identified within the HTML structure, the system collects a predefined set of key statistics for hitting, pitching, and fielding. These metrics were selected in advance because they are widely used to evaluate player performance and directly support the goals of the project. By limiting the scope of the data to these essential statistics, the dataset remains clean and focused, making it easier to analyze trends and compare players across different teams and seasons.
 
@@ -74,3 +76,14 @@ Moving onto the actual search part of the entire system. As you saw from the fig
 
 ![Seekr map](images/seekr-map.png)
 
+Breaking down what happens inside the seekr function as partially mentioned above, streamlit is the topic.  For my web face type output I am using streamlit due to many factors. Streamlit allows a full interactive web interface to be built entirely in Python, without needing separate frontend technologies such as HTML, CSS, or JavaScript. This significantly reduces development complexity while still producing a clean and professional interface. The interface itself is built using simple components allowing an ease of setup.  ```The st.text_input()``` captures the player’s name, while ```st.selectbox()``` provides a dropdown menu for selecting the statistical category (Hitting, Pitching, or Fielding). These serve as the input layer of the system. A conditional statement ensures that the search function only executes when both inputs are provided. This structure prevents unnecessary database calls and keeps execution controlled and efficient.
+
+For the output, Streamlit directly renders the results returned by the database. The ```st.dataframe()``` function displays the player’s statistics in an interactive table format, allowing sorting and scrolling. Visualizations generated with matplotlib are embedded seamlessly using ```st.pyplot()```. If no results are found, ```st.warning()```  provides immediate user feedback. All rendering is handled internally by Streamlit, meaning no additional formatting or frontend coding is required. The reasons for using matplotlib for the graphics are as follows:
+	
+Seamless Integration with Pandas
+Strong Customization Control
+Handles Multiple Plots Easily
+Lightweight and efficient 
+Works well with streamlit 
+			
+Overall, Streamlit functions as the presentation and interaction layer of the Seekr system. It bridges the gap between the user and the database by managing input collection, script execution, state handling, and output visualization. Its simplicity, integration with data science libraries, and rapid development capabilities make it an ideal choice.
