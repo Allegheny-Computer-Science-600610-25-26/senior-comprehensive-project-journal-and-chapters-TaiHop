@@ -1,3 +1,5 @@
+# experiments
+
 Especially as it pertains to responsible computing, if conducting experiments or evaluations that involve particular ethical considerations, those issues should be carefully considered and documented. In this project, the primary focus of evaluation is on accessibility and accuracy, both of which relate directly to responsible computing practices. Accessibility ensures that the application can be used by a wide range of users, including those with disabilities, while accuracy ensures that the information being presented is reliable and trustworthy.
 
 From an ethical standpoint, there are minimal risks involved in this project since it does not collect or store personal user data. However, there is still an important responsibility to ensure that the data being presented is correct and accessible. Providing inaccurate statistics could mislead users, and poor accessibility design could exclude certain groups of users from effectively using the tool. Because of this, both accessibility and accuracy testing are essential components of the experimental design.

@@ -44,7 +44,7 @@ Below is a figure of what the outcome would look like within my tool. The figure
 
 ![Data Visualizations](images/graph_mattj.png)
 
-My tool is optimal because the coaches are seeing the real they see graphs of the players stats that show how an athlete is doing, nothing that might create an imbalance between players in my database will be added to level the playing field. The more and more my tool gets used the better everything gets in terms of equality between players. This would be because everyone is using the same system. 
+My tool is optimal because the coaches are seeing the real they see graphs of the players stats that show how an athlete is doing, nothing that might create an imbalance between players in my database will be added to level the playing field. The more and more my tool gets used the better everything gets in terms of equality between players. This would be because everyone is using the same system. Also the information within data would also be updated more and more, so you have more up to date relevant data.
 
 ## Ethical Concerns
 
