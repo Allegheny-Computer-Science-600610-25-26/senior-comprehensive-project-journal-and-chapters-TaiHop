@@ -50,7 +50,15 @@ From a broader perspective, this test is functioning as a full integration test 
 
 The “EXCELLENT DATA” label reflects your threshold‑based evaluation, but it also signals that your system is already performing at a level that would be considered reliable for practical use. The next phase is about consistency, scalability, and refinement rather than major architectural changes. Increasing the number of tests, monitoring patterns in the failures, and tightening the weaker parts of the pipeline will help push that 95 percent closer to 100. This is why my next test will be of similar functionality however the timing of when I run the tests will be different.
 
-Finally, since I will be having the code update every 2 days, the validation factor comes into hand as my database is being updated to what the PAC stats are.
+Finally, since I will be having the code update every 2 days, the validation factor comes into hand as my database is being updated to what the PAC stats are. Above I discussed some results from tests on my tool. Below is a table of the outcomes on the initial test I ran regarding the test size of 20.
+
+![test out of 20](images/inital-test(20).png)
+
+Looking the previous table we get to see all the different outcomes from running the test. Take note that I have labeled how many days til the database gets updated. As we look it seems like there may be a pattern but as we ran it more, I realized that there was no pattern as there could be days where there are no games played or they play more. Meaning that pulling the data every two days leaves a good room for error. The whole data scraping process doesnt have to much of an impact so I think the most effecient and accurate way to have my tool up to date is to update the database at least once a day. Below is a table of a few tests I ran with a bigger test size.
+
+![test out of 50](images/initaltest2(50).png)
+
+The bigger test size as represented above we see that before the update we got scores of 37 and 32 out of 50. While after we updated we got 50 and 48 out of 50. This meaning that my tool accurately grabs the data. Note that the errors triggered after updating are from a player not being found in the hitting section but he is a pitcher and has no hitting stats, meaning that yes my database had an error but the error is an error itself and the flag came from name format differences.
 
 ## Threats to Validity
 
