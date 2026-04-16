@@ -27,7 +27,13 @@ One area that I will be working toward in the future in regards to this project 
 
 Alongside that I want to add to the database differently. I want to have more inputs alongside the graphs, meaning I want every database updated to have it's own spot on the x axis. This would allow easier reading of the graphs as the graphs would get more detailed. However this could lead to issues with database size as I would be adding over 100 players to the databse everyday.
 
+### Other sports
 
+Other sports are set to be added in the future. I planned on adding the other sports after i completed this first portion using baseball. It terms of how hard it would be and the answer to that is it would be pretty easy as the front end would need to be changed at all unless I was going for a different look. Moving onto the backend the html would need to be looked at the to see where they store the information within their html. Then lastly I would just need to knows which stats are most sought out by coaches, players and scouts.
+
+### Web
+
+The current state of the projects is a site run through streamlit, and hasn't become an actual web site yet. So the next step is transitioning to a website so that the site can be accessed by anyone who wants to.
 
 ## Future Ethical Implications and Recommendations
 
