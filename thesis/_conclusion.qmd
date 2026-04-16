@@ -37,5 +37,28 @@ The current state of the projects is a site run through streamlit, and hasn't be
 
 ## Future Ethical Implications and Recommendations
 
-Especially as pertains to the public release or use of your software or methods, what
-unresolved or special issues remain? What recommendations might you make?
+As Dataseekr moves toward public release, several ethical considerations and unresolved issues must be addressed.
+
+One key concern is data usage and ownership. Since the tool relies on scraping data from the PAC website, there may be legal and ethical implications regarding how that data is collected, stored, and redistributed. If the PAC site has terms of service that restrict automated data collection, continued use of scraping could raise compliance issues.
+
+Another issue is data accuracy and responsibility. While the tool has shown high accuracy after updates, there is still the possibility of outdated or incorrect data being displayed. If users such as scouts or players rely on this information for decision-making, inaccuracies could lead to unfair evaluations or missed opportunities.
+
+There is also the question of fair access and transparency. If the tool provides advantages in analyzing player performance, it could create an imbalance between users who have access to the tool and those who do not. Additionally, users should be made aware of how the data is collected and any limitations in its accuracy.
+
+Finally, scalability and data privacy become more important if the system expands. While current data is performance-based and likely public, expanding to other datasets or sports could introduce privacy concerns, particularly if more personal or sensitive information is included.
+
+## Recommendations
+
+To address these ethical concerns, several steps are recommended.
+
+Review and comply with the PAC website’s terms of service, and seek permission if necessary for data collection.
+
+Clearly communicate data limitations and update frequency to users to ensure transparency.
+
+Implement systems to regularly validate and verify data accuracy.
+
+Ensure the tool is used fairly by considering accessibility and availability to a broad range of users.
+
+Plan for future expansion by adopting responsible data management practices, particularly if handling more sensitive information.
+
+Overall, while Dataseekr provides clear benefits in data accessibility and analysis, careful consideration of these ethical factors is essential to ensure responsible and fair use.
