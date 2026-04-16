@@ -1,11 +1,21 @@
 # Conclusion
 
-Traditionally, this chapter addresses the areas proposed below as sections, although
-not necessarily in this order or organized as offered. However, the last section --
-"Ethical Implcations" is required for this chapter. See the heading below for more
-details.
-
 ## Summary of Results
+
+Overall, I have made a web based tool called Dataseekr, that is a player search engine for the PAC site. I validated the accuracy by running certain test. The main test was a random stat check as stated previously.
+
+The results from the tests were conclusive in the sense of proving whether my tool was scraping accurately. Additionally this inital test allowed me to see the span at which the site updates. Through the tests I learned that the site gets updated by game, what the means is that the site gets updated every game , so there could be a time it updates a few hours apart. Rather than it being a set schedule like on a tuesday, having it update with every game means that if you aren't careful or watchful of when you scrape, your data will become very outdated and unreliable. Thus, the update schedule for my tool was originally after every two days and now I update my database every day. Below is a table representing the percentage of accuracy change between the update dates:
+
+| Category             | Average Accuracy  | Improvement |
+|----------------------|-------------------|-------------|
+| Before update        | 69%               | —           |
+| After update         | 98%               | +29%        |
+| 2 days til update    | 86%               | —           |
+| 1 day til update     | 69%               | -17%        |
+
+The results show a clear improvement in accuracy after the update. Average accuracy increased from 69% before the update to 98% after, representing a substantial gain of 29 percentage points. In contrast, performance in the days leading up to the update declined, with accuracy dropping from an average of 86% two days before to 69% one day before—a decrease of 17 percentage points. Overall, this suggests that while performance temporarily dipped prior to the update, the update itself led to a significant and consistent improvement in accuracy.
+
+After, testing the accuracy of my tool it came down to testing the overall accesibility of my tool, what I used was the WAVE tool which is a chrome extension that will test your website. My tool had an inital 7.9 due to contrast fixing that my site became a 9.8 which proves my site is very accessible, however the PAC website is also very accesible in terms of the way they have coded it, stat findablity or accesibility not so much. However, both sites are very accesible but note PAC was a 9.2 mine became a 9.8 in terms of the WAVE score.
 
 ## Future Work
 
