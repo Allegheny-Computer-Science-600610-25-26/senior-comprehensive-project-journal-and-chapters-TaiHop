@@ -19,6 +19,16 @@ After, testing the accuracy of my tool it came down to testing the overall acces
 
 ## Future Work
 
+Working thourgh this project and the creation of many different ideas, I have found a few things that I will be working towrds in the future.
+
+### Hot Streaks and Comparisons
+
+One area that I will be working toward in the future in regards to this project is comparison between players and teams. I feel like working through things allowed me to see that this would really set my project apart because other sites don't offer this. This would you allow to select the players you want and directly comparing them allowing scouts to see the difference in the recruits. Also hot streaks like who is doing good at the time, allowing people to see the teams who are doing well along with a set number of players who are at the top of standings.
+
+Alongside that I want to add to the database differently. I want to have more inputs alongside the graphs, meaning I want every database updated to have it's own spot on the x axis. This would allow easier reading of the graphs as the graphs would get more detailed. However this could lead to issues with database size as I would be adding over 100 players to the databse everyday.
+
+
+
 ## Future Ethical Implications and Recommendations
 
 Especially as pertains to the public release or use of your software or methods, what
