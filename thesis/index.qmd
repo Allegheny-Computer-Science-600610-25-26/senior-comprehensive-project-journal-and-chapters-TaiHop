@@ -30,7 +30,7 @@ author:
       postal-code: 16335
 
 abstract: |
-  A well-researched student project. Like very.
+  Dataseekr, a toold designed to makes stats more accessible.
 ---
 
 {{< include _introduction.qmd >}}
