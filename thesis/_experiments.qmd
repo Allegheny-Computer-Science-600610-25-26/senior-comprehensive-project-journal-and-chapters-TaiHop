@@ -10,12 +10,12 @@ Additionally, the evaluation process is designed to be repeatable and unbiased. 
 
 In terms of accessibility, I will be focusing on testing the website side of this project, as accessibility determines how easily a site can be navigated and used by a wide range of users. Accessibility is an important factor in modern web development, as it ensures that users with different needs, including those who rely on assistive technologies, are able to interact with the site effectively. One simple way to test this manually is by visiting a website, pressing the Tab key, and observing how effectively you can move through interactive elements such as links, buttons, and forms. This gives a basic sense of how accessible the site is for keyboard users and whether the navigation flow is logical and usable.
 
-For this project, however, I am evaluating the accessibility of the website that hosts my search functionality in a more structured way. To do this, I used the Chrome extension called the WAVE Evaluation Tool, which analyzes web pages for accessibility issues and highlights potential problem areas. This tool provides a more detailed and systematic evaluation compared to manual testing, allowing me to identify specific issues that may not be immediately obvious. Below is a figure showing the output I obtained when I ran the tool on my website, as shown in [Figure 5]:
+For this project, however, I am evaluating the accessibility of the website that hosts my search functionality in a more structured way. To do this, I used the Chrome extension called the WAVE Evaluation Tool, which analyzes web pages for accessibility issues and highlights potential problem areas. This tool provides a more detailed and systematic evaluation compared to manual testing, allowing me to identify specific issues that may not be immediately obvious. Below is a figure showing the output I obtained when I ran the tool on my website, as shown in [Figure 8]:
 
-![Wave](images/Dataseekr-accessibility.png)
+![Wave](images/newwave.png)
 
-Figure 5 shows the WAVE Evaluation Tool output for the DataSeekr website.  
-*Figure 5 Caption: Accessibility evaluation results generated using the WAVE tool.*
+Figure 8 shows the WAVE Evaluation Tool output for the DataSeekr website.  
+*Figure 8 Caption: Accessibility evaluation results generated using the WAVE tool.*
 
 As seen in the figure, the site received a score of 7.9 out of 10. Ideally, this score should be as close to 10 as possible, as higher scores indicate fewer accessibility issues and a better overall user experience. In my case, the report identified three contrast errors, which relate to the color contrast used throughout the site. These errors were found in the sections menu; however, they are tied to an element that is not always present, which means they may not consistently affect all users but still represent a potential issue.
 
@@ -29,21 +29,21 @@ This project’s relation to accuracy is based on how well I am able to retrieve
 
 To evaluate this, I will be randomly selecting a player from the PAC within the sport of baseball, since that is currently the only sport I am incorporating in this project, with plans to expand to additional sports in the future. Using a random selection process helps ensure that the testing is unbiased and not limited to only certain players or specific cases. This allows for a more realistic assessment of how the tool performs across a wider range of data and prevents the results from being skewed.
 
-The testing process will involve selecting a random player, navigating to the site, and then randomly choosing a specific statistic from that player’s page. I will then compare that value to the one returned by my tool to determine whether they match. By repeating this process multiple times, I can evaluate how consistently accurate my tool is over a series of trials and identify any recurring issues or discrepancies that may need to be addressed. Below is a diagram of what the test will look like in terms of paths, as shown in [Figure 6]:
+The testing process will involve selecting a random player, navigating to the site, and then randomly choosing a specific statistic from that player’s page. I will then compare that value to the one returned by my tool to determine whether they match. By repeating this process multiple times, I can evaluate how consistently accurate my tool is over a series of trials and identify any recurring issues or discrepancies that may need to be addressed. Below is a diagram of what the test will look like in terms of paths, as shown in [Figure 9]:
 
-![Path](images/test-path.png)
+![Path](images/test-path.png){height=80%}
 
-Figure 6 shows the testing workflow and comparison path.  
-*Figure 6 Caption: Diagram illustrating the steps of the accuracy testing process.*
+Figure 9 shows the testing workflow and comparison path.  
+*Figure 9 Caption: Diagram illustrating the steps of the accuracy testing process.*
 
 Looking more in depth at the figure above, we see multiple steps to how this test works. As I briefly stated before, the test first connects to my database, and once it has successfully connected, it grabs a random player. The player can be from any team or any position, and depending on the player’s position, they will receive different stats dependent on their role, such as hitting, pitching, or fielding statistics. After the player has been selected and their random stat is chosen, the system then navigates to the website (PAC) where the stats were originally obtained and compares that stat of that player to what it currently is on the site.
 
-Below is the accuracy test results shown in [Figure 7]:
+Below is the accuracy test results shown in [Figure 10]:
 
-![Results](images/test-out.png)
+![Results](images/test-out.png){height=80%}
 
-Figure 7 shows the results of the accuracy testing process.  
-*Figure 7 Caption: Output of accuracy tests comparing database values to live site data.*
+Figure 10 shows the results of the accuracy testing process.  
+*Figure 10 Caption: Output of accuracy tests comparing database values to live site data.*
 
 This output represents a near-complete validation of the system’s ability to accurately retrieve and compare data between the database and the live PAC website. The system begins by randomly selecting players and statistics, ensuring unbiased testing across multiple scenarios. A result of 19 out of 20 tests passing corresponds to a 95 percent accuracy rate.
 
