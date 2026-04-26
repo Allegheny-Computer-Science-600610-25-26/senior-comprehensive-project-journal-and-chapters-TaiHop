@@ -7,7 +7,6 @@ To address the issues stated around player stats accessibility, I built a tool n
 ![FlowChart](images/WorkFlow.png)
 
 Figure 4 shows the flowchart of data processing by the tool.  
-*Figure 4 Caption: The flowchart of data processing used by DataSeekr.*
 
 The versions for the dependencies inside DataSeekr are as follows and summarized in [Table 1]:
 
@@ -38,7 +37,6 @@ Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to p
 ![HTML Info](images/HTML.png)
 
 Figure 5 shows the HTML structure and data paths used for scraping.  
-*Figure 5 Caption: HTML structure and data extraction paths from the PAC site.*
 
 Any possible issues relating changes to the site relating to how they have things tagged will be no issue because the table layout adaptation would be a simple fix as the overall structure should stay the same.
 
@@ -57,7 +55,6 @@ As we discussed before on how the csv transforms into a database, this section w
 ![Csv to DB Concept](images/Converter_Workkflow.png)
 
 Figure 6 shows the workflow of converting CSV data into a database.  
-*Figure 6 Caption: CSV to database conversion workflow.*
 
 This data ingestion process reliably loads statistical data from CSV files into a centralized SQLite database while keeping data safe and easy to manage. It starts by reading the CSV into a pandas DataFrame because pandas makes it simple to parse, inspect, and transform tabular data. Using pandas also means I can handle many CSV formats and perform validation and cleaning before anything is written to the database.
 
@@ -74,7 +71,6 @@ Moving onto the actual search part of the entire system. As shown in [Figure 7],
 ![Seekr map](images/seekr-map.png)
 
 Figure 7 shows the workflow of search functionality.  
-*Figure 7 Caption: Search and UI workflow using Streamlit.*
 
 Breaking down what happens inside the seekr function as partially mentioned above, streamlit is the topic. For my web face type output I am using streamlit due to many factors. Streamlit allows a full interactive web interface to be built entirely in Python, without needing separate frontend technologies such as HTML, CSS, or JavaScript. This significantly reduces development complexity while still producing a clean and professional interface.
 

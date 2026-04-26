@@ -31,7 +31,6 @@ After all that, a model of my workflow is shown in [Figure 1]:
 ![WorkFlow of tool](images/figg-comp.png)
 
 Figure 1 shows the workflow of the DataSeekr tool.  
-*Figure 1 Caption: End-to-end workflow of data collection, processing, and visualization.*
 
 While I mentioned earlier that the tool mainly covers two factors, it does help a little with popularity as well. It’s just not on the same level as athletes who get televised coverage. Those players gain popularity automatically because people already see them on TV. The athletes using my tool still need to be somewhat known ahead of time or have been seen by someone. However, using my tool will help them put their best foot forward, as coaches and scouts will see the most important information quickly and clearly.
 
@@ -56,28 +55,35 @@ Below is an example of the visualization output shown in [Figure 2]:
 ![Data Visualizations](images/graph_mattj.png)
 
 Figure 2 shows an example of player data visualization.  
-*Figure 2 Caption: Graph showing player performance trends and projectability.*
 
 ## Ethical Concerns
 
-Ethical concerns play an important role in shaping the direction and integrity of my project. Below, I outline how DataSeekr addresses these concerns.
+Ethical concerns play an important role in shaping the direction and integrity of my project. Below, I outline how DataSeekr addresses these concerns. In any data-driven system, especially one that relies on automated processes, it is important to consider not only how the system functions technically, but also how it impacts users, data sources, and the broader environment. Addressing ethical concerns early helps ensure that the system remains responsible, transparent, and sustainable over time.
 
 ## Information Privacy & Data Collection
 
-DataSeekr exclusively retrieves information that is already publicly available through the PAC website. Because of this, no privacy risks are introduced. The tool does not redistribute or commercialize the data and follows site guidelines.
+DataSeekr exclusively retrieves information that is already publicly available through the PAC website. Because of this, no privacy risks are introduced. The tool does not redistribute or commercialize the data and follows site guidelines. In addition, the system avoids collecting any personal or sensitive user data, focusing only on performance-based statistics that are intended for public viewing.
+
+This approach reduces the likelihood of unintended privacy concerns and ensures that the system operates within acceptable ethical boundaries. By relying only on publicly accessible information, the project maintains transparency in how data is collected and used. Users are able to trace the data back to its original source, which helps build confidence in the accuracy and legitimacy of the information being presented.
 
 ## Potential Misuse & Information Accuracy
 
-Although DataSeekr uses public data, misuse is still possible. To reduce this, the tool does not alter statistics or create subjective rankings. It simply presents data in a clearer format.
+Although DataSeekr uses public data, misuse is still possible. To reduce this, the tool does not alter statistics or create subjective rankings. It simply presents data in a clearer format. This design choice minimizes the risk of bias and ensures that users are interacting with the original data rather than modified interpretations.
 
-Accuracy depends on the PAC website. Any errors in the source will appear in the tool. Users should verify important data directly when needed.
+Accuracy depends on the PAC website. Any errors in the source will appear in the tool. Users should verify important data directly when needed. This highlights a limitation of the system, where the reliability of the output is directly tied to the reliability of the source data.
+
+In addition, maintaining accuracy requires consistent updates and monitoring. Since the data changes frequently, delays in updating can result in outdated or incomplete information. This reinforces the importance of maintaining a regular update schedule and validating results over time to ensure that the system continues to provide reliable data.
 
 ## Second and Third Party Risks
 
 Even public data can pose risks when reused in new contexts. To prevent misuse, DataSeekr limits data usage to internal processing and does not redistribute it. This maintains the original meaning and prevents misinterpretation [@Metcalf2019].
 
+When data is taken out of its original context, there is a risk that it may be misunderstood or used in unintended ways. By keeping the data within the system, these risks are reduced. Additionally, restricting redistribution helps preserve the integrity of the data and ensures that it remains consistent with its original purpose.
+
 ## Goal of my Project
 
-The goal of this project is to create a tool that promotes equality in sports, especially in recruiting and the transfer portal. It aims to eliminate missed opportunities caused by lack of access, time constraints, and inequality.
+The goal of this project is to create a tool that promotes equality in sports, especially in recruiting and the transfer portal. It aims to eliminate missed opportunities caused by lack of access, time constraints, and inequality. Many athletes are overlooked not because of performance, but because they lack visibility or access to the right tools.
 
-By providing fast, reliable, and clear data with visualizations, DataSeekr helps athletes gain exposure and gives coaches better tools to evaluate talent.
+By providing fast, reliable, and clear data with visualizations, DataSeekr helps athletes gain exposure and gives coaches better tools to evaluate talent. The use of visualizations improves interpretability, allowing users to quickly understand trends and performance without requiring advanced technical knowledge.
+
+Additionally, by relying on publicly available data, the system promotes fairness and equal opportunity. Athletes from all backgrounds are able to be represented, regardless of resources or exposure. This supports a more equitable environment where evaluation is based on performance rather than external advantages.

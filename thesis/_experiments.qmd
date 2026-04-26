@@ -15,7 +15,6 @@ For this project, however, I am evaluating the accessibility of the website that
 ![Wave](images/newwave.png)
 
 Figure 8 shows the WAVE Evaluation Tool output for the DataSeekr website.  
-*Figure 8 Caption: Accessibility evaluation results generated using the WAVE tool.*
 
 As seen in the figure, the site received a score of 7.9 out of 10. Ideally, this score should be as close to 10 as possible, as higher scores indicate fewer accessibility issues and a better overall user experience. In my case, the report identified three contrast errors, which relate to the color contrast used throughout the site. These errors were found in the sections menu; however, they are tied to an element that is not always present, which means they may not consistently affect all users but still represent a potential issue.
 
@@ -34,15 +33,14 @@ The testing process will involve selecting a random player, navigating to the si
 ![Path](images/test-path.png)
 
 Figure 9 shows the testing workflow and comparison path.  
-*Figure 9 Caption: Diagram illustrating the steps of the accuracy testing process.*
 
 Looking more in depth at the figure above, we see multiple steps to how this test works. As I briefly stated before, the test first connects to my database, and once it has successfully connected, it grabs a random player. The player can be from any team or any position, and depending on the player’s position, they will receive different stats dependent on their role, such as hitting, pitching, or fielding statistics. After the player has been selected and their random stat is chosen, the system then navigates to the website (PAC) where the stats were originally obtained and compares that stat of that player to what it currently is on the site.
 
 Below is the accuracy test results shown in [Figure 10]:
 
 ![Results](images/test-out.png)
+
 Figure 10 shows the results of the accuracy testing process.  
-*Figure 10 Caption: Output of accuracy tests comparing database values to live site data.*
 
 This output represents a near-complete validation of the system’s ability to accurately retrieve and compare data between the database and the live PAC website. The system begins by randomly selecting players and statistics, ensuring unbiased testing across multiple scenarios. A result of 19 out of 20 tests passing corresponds to a 95 percent accuracy rate.
 
