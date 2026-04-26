@@ -2,12 +2,12 @@
 
 ## Overview 
 
-To address the issues stated around player stats accessibility, I built a tool named DataSeekr. Which is a tool that makes player stats more accessible and easy to find. The tool is a search engine that gives visuals along with the player stats and on the backend there is a scraper updating the database that the searching function accesses. The workflow looks like this as shown in [Figure 1]:
+To address the issues stated around player stats accessibility, I built a tool named DataSeekr. Which is a tool that makes player stats more accessible and easy to find. The tool is a search engine that gives visuals along with the player stats and on the backend there is a scraper updating the database that the searching function accesses. The workflow looks like this as shown in [Figure 4]:
 
 ![FlowChart](images/WorkFlow.png)
 
-Figure 1 shows the flowchart of data processing by the tool.  
-*Figure 1 Caption: The flowchart of data processing used by DataSeekr.*
+Figure 4 shows the flowchart of data processing by the tool.  
+*Figure 4 Caption: The flowchart of data processing used by DataSeekr.*
 
 The versions for the dependencies inside DataSeekr are as follows and summarized in [Table 1]:
 
@@ -28,18 +28,18 @@ It is important to note that I am using UV which basically sets it that the proj
 
 ## Grabber
 
-Looking at the flow chart in [Figure 1], this is where the entire process begins. The grabber function serves as the foundation of the system and is responsible for several essential tasks. These include generating a CSV file from the scraped data and then converting that CSV into a database. This approach was chosen because CSV files are easy to manipulate, review, and share, which promotes a more streamlined and flexible workflow. By using CSV files as an intermediate step, anyone who wants to make their own adaptations or extensions to the project can work directly with the CSV data without needing to interact with the database layer.
+Looking at the flow chart in [Figure 4], this is where the entire process begins. The grabber function serves as the foundation of the system and is responsible for several essential tasks. These include generating a CSV file from the scraped data and then converting that CSV into a database. This approach was chosen because CSV files are easy to manipulate, review, and share, which promotes a more streamlined and flexible workflow. By using CSV files as an intermediate step, anyone who wants to make their own adaptations or extensions to the project can work directly with the CSV data without needing to interact with the database layer.
 
 For the scraping portion of the project, two primary tools make the process possible: Selenium and BeautifulSoup. Selenium was selected for multiple reasons, with the most important being its ability to handle JavaScript-driven content. Many modern websites rely heavily on JavaScript to load data dynamically, and standard scraping tools such as requests are often unable to render this content properly. When JavaScript is not executed correctly, the page may appear empty, which can lead to situations where database tables are created but contain no data, or where scraping attempts result in errors. Selenium avoids these issues by fully loading and rendering the entire webpage before any data extraction occurs, ensuring that all required content is available.
 
-Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example figure of how the HTML structure and data paths appear within the PAC site as shown in [Figure 2]:
+Once the webpage has been fully rendered by Selenium, BeautifulSoup is used to parse the resulting HTML. BeautifulSoup navigates the HTML structure and follows defined paths to locate and extract the necessary information. To ensure reliable scraping and avoid triggering bot protection mechanisms, a five second delay is implemented between scraping actions. This delay allows pages to load completely and helps maintain responsible scraping behavior. Below is an example figure of how the HTML structure and data paths appear within the PAC site as shown in [Figure 5]:
 
 ![HTML Info](images/HTML.png)
 
-Figure 2 shows the HTML structure and data paths used for scraping.  
-*Figure 2 Caption: HTML structure and data extraction paths from the PAC site.*
+Figure 5 shows the HTML structure and data paths used for scraping.  
+*Figure 5 Caption: HTML structure and data extraction paths from the PAC site.*
 
-Any possible issues relating changes to the site relating to how they have things tagged, will be no issue because the table layout adaptation would be a simple fix as the overall structure should stay the same.
+Any possible issues relating changes to the site relating to how they have things tagged will be no issue because the table layout adaptation would be a simple fix as the overall structure should stay the same.
 
 After the data paths are identified within the HTML structure, the system collects a predefined set of key statistics for hitting, pitching, and fielding. These metrics were selected in advance because they are widely used to evaluate player performance and directly support the goals of the project. By limiting the scope of the data to these essential statistics, the dataset remains clean and focused, making it easier to analyze trends and compare players across different teams and seasons.
 
@@ -51,12 +51,12 @@ Finally, the program incorporates intentional delays between page loads and team
 
 ## DB Maker (Code.py)
 
-As we discussed before on how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is a figure of the map of converter shown in [Figure 3]:
+As we discussed before on how the csv transforms into a database, this section will handle any questions regarding that topic. To begin things we need to get a good look at the concept or map of the steps of the conversion process. Below is a figure of the map of converter shown in [Figure 6]:
 
 ![Csv to DB Concept](images/Converter_Workkflow.png)
 
-Figure 3 shows the workflow of converting CSV data into a database.  
-*Figure 3 Caption: CSV to database conversion workflow.*
+Figure 6 shows the workflow of converting CSV data into a database.  
+*Figure 6 Caption: CSV to database conversion workflow.*
 
 This data ingestion process reliably loads statistical data from CSV files into a centralized SQLite database while keeping data safe and easy to manage. It starts by reading the CSV into a pandas DataFrame because pandas makes it simple to parse, inspect, and transform tabular data. Using pandas also means I can handle many CSV formats and perform validation and cleaning before anything is written to the database.
 
@@ -68,12 +68,12 @@ Before inserting new data I identify all the year and school combinations presen
 
 ## Search / UI (Seekr.py)
 
-Moving onto the actual search part of the entire system. As shown in [Figure 4], this isn't directly connected to the scraping portion of my tool. This portion of the tool is mainly dependent on the database. When ```Seekr.py``` is run, it starts the Streamlit UI and at the same time this is connected to the database stored within the ```src``` folder. The figure below shows a more defined map of search functionality:
+Moving onto the actual search part of the entire system. As shown in [Figure 7], this isn't directly connected to the scraping portion of my tool. This portion of the tool is mainly dependent on the database. When ```Seekr.py``` is run, it starts the Streamlit UI and at the same time this is connected to the database stored within the ```src``` folder. The figure below shows a more defined map of search functionality:
 
 ![Seekr map](images/seekr-map.png)
 
-Figure 4 shows the workflow of search functionality.  
-*Figure 4 Caption: Search and UI workflow using Streamlit.*
+Figure 7 shows the workflow of search functionality.  
+*Figure 7 Caption: Search and UI workflow using Streamlit.*
 
 Breaking down what happens inside the seekr function as partially mentioned above, streamlit is the topic. For my web face type output I am using streamlit due to many factors. Streamlit allows a full interactive web interface to be built entirely in Python, without needing separate frontend technologies such as HTML, CSS, or JavaScript. This significantly reduces development complexity while still producing a clean and professional interface.
 
