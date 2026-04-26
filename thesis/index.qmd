@@ -30,7 +30,7 @@ author:
       postal-code: 16335
 
 abstract: |
-  Dataseekr, a toold designed to makes stats more accessible.
+  Dataseekr, a tool designed to make stats more accessible, enhances the usability of player performance data by providing a structured and intuitive interface that allows users to quickly search, compare, and interpret statistics.
 ---
 
 {{< include _introduction.qmd >}}

@@ -48,21 +48,27 @@ This output represents a near-complete validation of the system’s ability to a
 
 Although the failure was simple, it is just as important as the successes. A mismatch could indicate a genuine data discrepancy, a scraping issue, or formatting differences such as “.300” versus “0.300”. These failures highlight areas for improvement and help guide future refinements.
 
-Finally, since the database is updated every two days, validation plays a key role in ensuring that stored data reflects current PAC statistics. Below is a table of results from initial testing:
+Finally, since the database is updated every two days, validation plays a key role in ensuring that stored data reflects current PAC statistics. 
 
-| Test | 2 days til update | 1 days til update | After update |
-|------|-------------------|-------------------|--------------|
-|      | 17/20             | 15/20             | 20/20        |
-|      | 16/20             | 16/20             | 19/20        |
-|      | 19/20             | 10/20             | 19/20        |
-|      | 17/20             | 14/20             | 20/20        |
+Below are the accuracy test results from initial testing:
+
+Table: Initial accuracy test results by update timing
+
+| Test | 2 days until update | 1 day until update | After update |
+|------|---------------------|--------------------|--------------|
+| 1    | 17/20               | 15/20              | 20/20        |
+| 2    | 16/20               | 16/20              | 19/20        |
+| 3    | 19/20               | 10/20              | 19/20        |
+| 4    | 17/20               | 14/20              | 20/20        |
 
 Below is a table from larger sample tests:
 
+Table: Larger sample accuracy test results
+
 | Test | Before update | After update |
 |------|---------------|--------------|
-|      | 37/50         | 48/50        |
-|      | 32/50         | 50/50        |
+| 1    | 37/50         | 48/50        |
+| 2    | 32/50         | 50/50        |
 
 These results show that updating the database more frequently improves accuracy, suggesting that daily updates may be the most effective approach.
 

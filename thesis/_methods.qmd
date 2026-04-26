@@ -11,7 +11,8 @@ Figure 4 shows the flowchart of data processing by the tool.
 
 The versions for the dependencies inside DataSeekr are as follows and summarized in [Table 1]:
 
-**Table 1: Libraries and versions used in DataSeekr**
+Table: Libraries and versions used in DataSeekr
+
 
 | Package             | Version |
 |--------------------|--------|

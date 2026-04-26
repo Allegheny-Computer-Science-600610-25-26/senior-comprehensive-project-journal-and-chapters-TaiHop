@@ -4,14 +4,16 @@
 
 Overall, I have made a web based tool called Dataseekr, that is a player search engine for the PAC site. I validated the accuracy by running certain test. The main test was a random stat check as stated previously.
 
-The results from the tests were conclusive in the sense of proving whether my tool was scraping accurately. Additionally this inital test allowed me to see the span at which the site updates. Through the tests I learned that the site gets updated by game, what the means is that the site gets updated every game , so there could be a time it updates a few hours apart. Rather than it being a set schedule like on a tuesday, having it update with every game means that if you aren't careful or watchful of when you scrape, your data will become very outdated and unreliable. Thus, the update schedule for my tool was originally after every two days and now I update my database every day. Below is a table representing the percentage of accuracy change between the update dates:
+The results from the tests were conclusive in the sense of proving whether my tool was scraping accurately. Additionally this inital test allowed me to see the span at which the site updates. Through the tests I learned that the site gets updated by game, what the means is that the site gets updated every game , so there could be a time it updates a few hours apart. Rather than it being a set schedule like on a tuesday, having it update with every game means that if you aren't careful or watchful of when you scrape, your data will become very outdated and unreliable. Thus, the update schedule for my tool was originally after every two days and now I update my database every day. Below is a table representing the percentage of accuracy change between the update dates.
 
-| Category             | Average Accuracy  | Improvement |
-|----------------------|-------------------|-------------|
-| Before update        | 69%               | —           |
-| After update         | 98%               | +29%        |
-| 2 days til update    | 86%               | —           |
-| 1 day til update     | 69%               | -17%        |
+Table: Percentage of accuracy change between update intervals
+
+| Category          | Average Accuracy | Improvement |
+|------------------|------------------|--------------|
+| Before update    | 69%              | —            |
+| After update     | 98%              | +29%         |
+| 2 days until update | 86%           | —            |
+| 1 day until update  | 69%           | -17%         |
 
 The results show a clear improvement in accuracy after the update. Average accuracy increased from 69% before the update to 98% after, representing a substantial gain of 29 percentage points. In contrast, performance in the days leading up to the update declined, with accuracy dropping from an average of 86% two days before to 69% one day before—a decrease of 17 percentage points. Overall, this suggests that while performance temporarily dipped prior to the update, the update itself led to a significant and consistent improvement in accuracy.
 
