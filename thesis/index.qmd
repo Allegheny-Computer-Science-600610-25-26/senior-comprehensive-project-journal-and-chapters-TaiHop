@@ -12,7 +12,7 @@ format:
 natbiboptions: numbers
 # EDIT AT YOUR OWN PERIL #
 
-title: DataSeekr.Ai
+title: DataSeekr
 
 firstreader: Oliver Bonham-Carter PHD
 secondreader: Gregory Kapfhammer PHD

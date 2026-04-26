@@ -31,7 +31,7 @@ To evaluate this, I will be randomly selecting a player from the PAC within the 
 
 The testing process will involve selecting a random player, navigating to the site, and then randomly choosing a specific statistic from that player’s page. I will then compare that value to the one returned by my tool to determine whether they match. By repeating this process multiple times, I can evaluate how consistently accurate my tool is over a series of trials and identify any recurring issues or discrepancies that may need to be addressed. Below is a diagram of what the test will look like in terms of paths, as shown in [Figure 9]:
 
-![Path](images/test-path.png){height=80%}
+![Path](images/test-path.png)
 
 Figure 9 shows the testing workflow and comparison path.  
 *Figure 9 Caption: Diagram illustrating the steps of the accuracy testing process.*
@@ -40,8 +40,7 @@ Looking more in depth at the figure above, we see multiple steps to how this tes
 
 Below is the accuracy test results shown in [Figure 10]:
 
-![Results](images/test-out.png){height=80%}
-
+![Results](images/test-out.png)
 Figure 10 shows the results of the accuracy testing process.  
 *Figure 10 Caption: Output of accuracy tests comparing database values to live site data.*
 
