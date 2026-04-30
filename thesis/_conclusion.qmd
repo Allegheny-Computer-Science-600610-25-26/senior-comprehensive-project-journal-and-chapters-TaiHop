@@ -1,15 +1,66 @@
 # Conclusion
 
-Traditionally, this chapter addresses the areas proposed below as sections, although
-not necessarily in this order or organized as offered. However, the last section --
-"Ethical Implcations" is required for this chapter. See the heading below for more
-details.
-
 ## Summary of Results
+
+Overall, I have made a web based tool called Dataseekr, that is a player search engine for the PAC site. I validated the accuracy by running certain test. The main test was a random stat check as stated previously.
+
+The results from the tests were conclusive in the sense of proving whether my tool was scraping accurately. Additionally this inital test allowed me to see the span at which the site updates. Through the tests I learned that the site gets updated by game, what the means is that the site gets updated every game , so there could be a time it updates a few hours apart. Rather than it being a set schedule like on a tuesday, having it update with every game means that if you aren't careful or watchful of when you scrape, your data will become very outdated and unreliable. Thus, the update schedule for my tool was originally after every two days and now I update my database every day. Below is a table representing the percentage of accuracy change between the update dates.
+
+Table: Percentage of accuracy change between update intervals
+
+| Category            | Average Accuracy | Improvement  |
+|---------------------|------------------|--------------|
+| Before update       | 69%              | —            |
+| After update        | 98%              | +29%         |
+| 2 days until update | 86%              | —            |
+| 1 day until update  | 69%              | -17%         |
+
+The results show a clear improvement in accuracy after the update. Average accuracy increased from 69% before the update to 98% after, representing a substantial gain of 29 percentage points. In contrast, performance in the days leading up to the update declined, with accuracy dropping from an average of 86% two days before to 69% one day before—a decrease of 17 percentage points. Overall, this suggests that while performance temporarily dipped prior to the update, the update itself led to a significant and consistent improvement in accuracy.
+
+After, testing the accuracy of my tool it came down to testing the overall accesibility of my tool, what I used was the WAVE tool which is a chrome extension that will test your website. My tool had an inital 7.9 due to contrast fixing that my site became a 9.8 which proves my site is very accessible, however the PAC website is also very accesible in terms of the way they have coded it, stat findablity or accesibility not so much. However, both sites are very accesible but note PAC was a 9.2 mine became a 9.8 in terms of the WAVE score.
 
 ## Future Work
 
+Working thourgh this project and the creation of many different ideas, I have found a few things that I will be working towrds in the future.
+
+### Hot Streaks and Comparisons
+
+One area that I will be working toward in the future in regards to this project is comparison between players and teams. I feel like working through things allowed me to see that this would really set my project apart because other sites don't offer this. This would you allow to select the players you want and directly comparing them allowing scouts to see the difference in the recruits. Also hot streaks like who is doing good at the time, allowing people to see the teams who are doing well along with a set number of players who are at the top of standings.
+
+Alongside that I want to add to the database differently. I want to have more inputs alongside the graphs, meaning I want every database updated to have it's own spot on the x axis. This would allow easier reading of the graphs as the graphs would get more detailed. However this could lead to issues with database size as I would be adding over 100 players to the databse everyday.
+
+### Other sports
+
+Other sports are set to be added in the future. I planned on adding the other sports after i completed this first portion using baseball. It terms of how hard it would be and the answer to that is it would be pretty easy as the front end would need to be changed at all unless I was going for a different look. Moving onto the backend the html would need to be looked at the to see where they store the information within their html. Then lastly I would just need to knows which stats are most sought out by coaches, players and scouts.
+
+### Web
+
+The current state of the projects is a site run through streamlit, and hasn't become an actual web site yet. So the next step is transitioning to a website so that the site can be accessed by anyone who wants to.
+
 ## Future Ethical Implications and Recommendations
 
-Especially as pertains to the public release or use of your software or methods, what
-unresolved or special issues remain? What recommendations might you make?
+As Dataseekr moves toward public release, several ethical considerations and unresolved issues must be addressed.
+
+One key concern is data usage and ownership. Since the tool relies on scraping data from the PAC website, there may be legal and ethical implications regarding how that data is collected, stored, and redistributed. If the PAC site has terms of service that restrict automated data collection, continued use of scraping could raise compliance issues.
+
+Another issue is data accuracy and responsibility. While the tool has shown high accuracy after updates, there is still the possibility of outdated or incorrect data being displayed. If users such as scouts or players rely on this information for decision-making, inaccuracies could lead to unfair evaluations or missed opportunities.
+
+There is also the question of fair access and transparency. If the tool provides advantages in analyzing player performance, it could create an imbalance between users who have access to the tool and those who do not. Additionally, users should be made aware of how the data is collected and any limitations in its accuracy.
+
+Finally, scalability and data privacy become more important if the system expands. While current data is performance-based and likely public, expanding to other datasets or sports could introduce privacy concerns, particularly if more personal or sensitive information is included.
+
+## Recommendations
+
+To address these ethical concerns, several steps are recommended.
+
+Review and comply with the PAC website’s terms of service, and seek permission if necessary for data collection.
+
+Clearly communicate data limitations and update frequency to users to ensure transparency.
+
+Implement systems to regularly validate and verify data accuracy.
+
+Ensure the tool is used fairly by considering accessibility and availability to a broad range of users.
+
+Plan for future expansion by adopting responsible data management practices, particularly if handling more sensitive information.
+
+Overall, while Dataseekr provides clear benefits in data accessibility and analysis, careful consideration of these ethical factors is essential to ensure responsible and fair use.
