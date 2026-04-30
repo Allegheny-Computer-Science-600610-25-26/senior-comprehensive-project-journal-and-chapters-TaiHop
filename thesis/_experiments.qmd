@@ -12,7 +12,7 @@ In terms of accessibility, I will be focusing on testing the website side of thi
 
 For this project, however, I am evaluating the accessibility of the website that hosts my search functionality in a more structured way. To do this, I used the Chrome extension called the WAVE Evaluation Tool, which analyzes web pages for accessibility issues and highlights potential problem areas. This tool provides a more detailed and systematic evaluation compared to manual testing, allowing me to identify specific issues that may not be immediately obvious. Below is a figure showing the output I obtained when I ran the tool on my website, as shown in [Figure 8]:
 
-![Wave](images/newwave.png)
+![Wave](images/newwave.png){height=80%}
 
 Figure 8 shows the WAVE Evaluation Tool output for the DataSeekr website.  
 
@@ -30,7 +30,7 @@ To evaluate this, I will be randomly selecting a player from the PAC within the 
 
 The testing process will involve selecting a random player, navigating to the site, and then randomly choosing a specific statistic from that player’s page. I will then compare that value to the one returned by my tool to determine whether they match. By repeating this process multiple times, I can evaluate how consistently accurate my tool is over a series of trials and identify any recurring issues or discrepancies that may need to be addressed. Below is a diagram of what the test will look like in terms of paths, as shown in [Figure 9]:
 
-![Path](images/test-path.png)
+![Path](images/test-path.png){height=80%}
 
 Figure 9 shows the testing workflow and comparison path.  
 
@@ -38,7 +38,7 @@ Looking more in depth at the figure above, we see multiple steps to how this tes
 
 Below is the accuracy test results shown in [Figure 10]:
 
-![Results](images/test-out.png)
+![Results](images/test-out.png){height=80%}
 
 Figure 10 shows the results of the accuracy testing process.  
 
